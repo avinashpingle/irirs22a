@@ -43,7 +43,6 @@ public class ProductTests{
 		PropUtil repo = new PropUtil();
 		UIKeyword.launchUrl(Environment.URL);
 		UIKeyword.mouseMove(repo.getLocator("men_menu")[0],repo.getLocator("men_menu")[1]);
-		UIKeyword.click(repo.getLocator("menu_topwear")[0],repo.getLocator("menu_topwear")[1]);
 		WaitFor.elemtnToBePresent(repo.getLocator("categories_text")[0],repo.getLocator("categories_text")[1]);
 		List<String> actualCategories = UIKeyword.getTexts(repo.getLocator("categories_text")[0],repo.getLocator("categories_text")[1]);
 		for (int i=0; i<actualCategories.size(); i++) {
@@ -58,8 +57,5 @@ public class ProductTests{
 		HomePage home = new HomePage();
 		home.hoverOnMenMenu();
 		home.clickOnCasualShirts();
-		CasualShirtsPage casual = new CasualShirtsPage();
-		int itemCount = casual.getItemCount();
-		
 	}
 }
