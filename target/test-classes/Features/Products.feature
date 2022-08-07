@@ -5,7 +5,7 @@ Background:
 	
 Scenario: Verify search result for polo men
 	And मिंत्रा का पेज खुला होना चाहिए
-	When user searches for polo t shirt
+	When user searches for product "t-shirt"
 	Then all results should be related to polo
 
 Scenario: Verify if search by popularity yeilds proper results

@@ -1,17 +1,13 @@
 package com.iris22a.stepdefinition;
 
 import java.util.List;
-
 import org.testng.Assert;
-
 import com.iris22a.keywords.UIKeyword;
 import com.iris22a.pages.HomePage;
 import com.iris22a.pages.MenTShirtsPage;
 import com.iris22a.util.Environment;
 import com.iris22a.util.WaitFor;
-
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -28,6 +24,11 @@ public class ProductsSteps {
 		home.searchProduct("Polo");
 	}
 
+	@When("user searches for product {string}")
+	public void searchProduct(String productName) {
+		HomePage home = new HomePage();
+		home.searchProduct(productName);
+	}
 	@Then("all results should be related to polo")
 	public void verifyAllResults() {
 		HomePage home = new HomePage();
