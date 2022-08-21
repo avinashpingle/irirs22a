@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -29,10 +30,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  *
  */
 public class UIKeyword {
-	public static RemoteWebDriver driver;
+	public static WebDriver driver;
 	private static final Logger log = Logger.getLogger(UIKeyword.class);
 
-	public static void openBrowser(String browserName) {
+	public static WebDriver openBrowser(String browserName) {
 		if (browserName.equalsIgnoreCase("Chrome")) {
 			ChromeOptions option = new ChromeOptions();
 			option.addArguments("-disable-notification","start-maximized","--incognito");
@@ -50,6 +51,7 @@ public class UIKeyword {
 			driver = new InternetExplorerDriver();
 		}
 		log.info(browserName + " browser is launched successfully");
+		return driver;
 	}
 
 	public static void launchUrl(String url) {

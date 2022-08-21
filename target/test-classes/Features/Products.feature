@@ -1,8 +1,5 @@
-Feature: इस file में प्रोडक्ट की सारी टेस्ट केसेस है 
+Feature: इस file में प्रोडक्ट की सारी टेस्ट केसेस है 	
 
-Background:
-	Given मिंत्रा का पेज खुला होना चाहिए
-	
 Scenario: Verify search result for polo men
 	And मिंत्रा का पेज खुला होना चाहिए
 	When user searches for product "t-shirt"

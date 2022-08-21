@@ -1,10 +1,10 @@
-2022-Jul-17 13:11:41,219 [main] com.iris22a.keywords.UIKeyword 
-  INFO  Chrome browser is launched successfully
-2022-Jul-17 13:11:46,766 [main] com.iris22a.keywords.UIKeyword 
+2022-Aug-20 12:42:02,002 [main] com.iris22a.keywords.UIKeyword 
   INFO  Url is launched: https://www.myntra.com
-2022-Jul-17 13:11:53,170 [main] com.iris22a.pages.HomePage 
-  INFO  Clicked on Casual Shirts
-2022-Jul-17 13:11:54,007 [main] com.iris22a.keywords.UIKeyword 
+2022-Aug-20 12:42:10,076 [main] com.iris22a.config.TestBase 
   INFO  Browser is closed successfully
-2022-Jul-17 13:11:54,008 [main] com.iris22a.config.TestBase 
+2022-Aug-20 12:42:12,646 [main] com.iris22a.keywords.UIKeyword 
+  INFO  Chrome browser is launched successfully
+2022-Aug-20 12:42:15,327 [main] com.iris22a.keywords.UIKeyword 
+  INFO  Url is launched: https://www.myntra.com
+2022-Aug-20 12:42:22,292 [main] com.iris22a.config.TestBase 
   INFO  Browser is closed successfully

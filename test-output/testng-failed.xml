@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.iris22a.ProductTests">
+      <class name="com.runner.RunnerTest">
         <methods>
-          <include name="verifyItemCountOfCasualShirts"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="runScenario" invocation-numbers="9 8 4 5 6 1 7 3 2 11 12"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.iris22a.ProductTests -->
+      </class> <!-- com.runner.RunnerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
