@@ -1,8 +1,6 @@
 package com.iris22a.util;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.NoSuchElementException;
@@ -19,7 +17,6 @@ public class WaitFor {
 	
 	static{
 		wait= new FluentWait<WebDriver>(UIKeyword.driver);
-		wait.withTimeout(30, TimeUnit.SECONDS);
 		wait.withTimeout(Duration.ofSeconds(30));
 		wait.pollingEvery(Duration.ofMillis(500));
 		wait.withMessage("Wait is finished and element is not loaded or available");

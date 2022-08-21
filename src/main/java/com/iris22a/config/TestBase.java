@@ -1,6 +1,7 @@
 package com.iris22a.config;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -13,7 +14,8 @@ import io.cucumber.java.Before;
 
 public class TestBase {
 	
-	
+	public WebDriver driver;
+	public ThreadLocal<WebDriver> thread = new ThreadLocal<>();
 	private static final Logger log = Logger.getLogger(TestBase.class);
 	
 	
@@ -27,12 +29,13 @@ public class TestBase {
 			browserName = "Chrome";
 			log.info("Setting default browser as chrome");
 		}
-		UIKeyword.openBrowser(browserName);
+		this.driver = UIKeyword.openBrowser(browserName);
+		thread.set(this.driver);
 	}
 	
 	@After
 	public void tearDown() throws Exception {
-		UIKeyword.closeBrowser();
+		thread.get().close();
 		log.info("Browser is closed successfully");
 	}
 }
